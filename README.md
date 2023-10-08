@@ -15,7 +15,7 @@ $ npm install @kikobeats/time-span --save
 
 ```js
 const { setTimeout } = require('timers/promises')
-const timeSpan = require('@kikobeats/time-span')
+const timeSpan = require('@kikobeats/time-span')()
 
 const duration = timeSpan()
 await setTimeout(5000)
@@ -26,7 +26,11 @@ console.log(duration()) // => 5001.870375
 It also accepts a `format` function:
 
 ```js
-const duration = timeSpan({ format: n => `${Math.round(n)}ms`})
+const timeSpan = require('@kikobeats/time-span')({
+  format: n => `${Math.round(n)}ms`
+})
+
+const duration = timeSpan()
 await setTimeout(5000)
 console.log(duration()) // => 5000ms
 ```
