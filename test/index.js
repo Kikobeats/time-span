@@ -2,10 +2,10 @@
 
 const { setTimeout } = require('timers/promises')
 const test = require('ava')
-
-const timeSpan = require('..')
+const createTimeSpan = require('..')
 
 test('default options', async t => {
+  const timeSpan = createTimeSpan()
   const duration = timeSpan()
   await setTimeout(100)
   const end = duration()
@@ -15,14 +15,17 @@ test('default options', async t => {
 test('pass `start`', async t => {
   const start = process.hrtime.bigint()
   await setTimeout(100)
-  const duration = timeSpan({ start })
+  const timeSpan = createTimeSpan()
+  const duration = timeSpan(start)
   await setTimeout(100)
   const end = duration()
   t.true(end > 200 && end < 200 + 200 * 0.02)
 })
 
 test('pass `format`', async t => {
-  const duration = timeSpan({ format: n => `${Math.round(n)}ms` })
+  const format = n => `${Math.round(n)}ms`
+  const timeSpan = createTimeSpan({ format })
+  const duration = timeSpan()
   await setTimeout(100)
   const end = duration()
   t.true(end.endsWith('ms'))
