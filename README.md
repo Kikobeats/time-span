@@ -1,7 +1,7 @@
 # time-span
 
 ![Last version](https://img.shields.io/github/tag/@kikobeats/time-span.svg?style=flat-square)
-[![NPM Status](https://img.shields.io/npm/dm/@kikobeats/time-span.svg?style=flat-square)](https://www.npmjs.org/package/time-span)
+[![NPM Status](https://img.shields.io/npm/dm/@kikobeats/time-span.svg?style=flat-square)](https://www.npmjs.org/package/@kikobeats/time-span)
 
 > A zero dependencies high resolution timing function.
 
