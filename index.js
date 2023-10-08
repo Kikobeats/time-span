@@ -1,4 +1,4 @@
 module.exports =
-  (start = process.hrtime.bigint()) =>
+  ({ start = process.hrtime.bigint(), format = n => n } = {}) =>
     () =>
-      Number(process.hrtime.bigint() - start) / 1e6
+      format(Number(process.hrtime.bigint() - start) / 1e6)

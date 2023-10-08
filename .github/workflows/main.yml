@@ -51,12 +51,12 @@ jobs:
           run_install: true
       - name: Test
         run: pnpm test
-      # - name: Report
-      #   run: mkdir -p coverage && npx c8 report --reporter=text-lcov > coverage/lcov.info
-      # - name: Coverage
-      #   uses: coverallsapp/github-action@main
-      #   with:
-      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Report
+        run: mkdir -p coverage && npx c8 report --reporter=text-lcov > coverage/lcov.info
+      - name: Coverage
+        uses: coverallsapp/github-action@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Release
         env:
           CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{ secrets.GH_TOKEN }}
