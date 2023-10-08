@@ -23,6 +23,14 @@ await setTimeout(5000)
 console.log(duration()) // => 5001.870375
 ```
 
+It also accepts a `format` function:
+
+```js
+const duration = timeSpan({ format: n => `${Math.round(n)}ms`})
+await setTimeout(5000)
+console.log(duration()) // => 5000ms
+```
+
 ## License
 
 **time-span** © [Kiko Beats](https://kikobeats.com), released under the [MIT](https://github.com/Kikobeats/time-span/blob/master/LICENSE.md) License.<br>
