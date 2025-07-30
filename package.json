@@ -3,7 +3,8 @@
   "description": "simple high resolution timing",
   "homepage": "https://github.com/kikobeats/time-span",
   "version": "1.0.6",
-  "main": "index.js",
+  "types": "src/index.d.ts",
+  "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
     "name": "Kiko Beats",
@@ -52,7 +53,7 @@
     "node": ">= 18"
   },
   "files": [
-    "index.js"
+    "src"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
