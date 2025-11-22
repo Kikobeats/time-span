@@ -2,7 +2,7 @@
   "name": "@kikobeats/time-span",
   "description": "simple high resolution timing",
   "homepage": "https://github.com/kikobeats/time-span",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "types": "src/index.d.ts",
   "main": "src/index.js",
   "author": {
