@@ -1,6 +1,6 @@
 {
   "name": "@kikobeats/time-span",
-  "description": "simple high resolution timing",
+  "description": "High-resolution elapsed-time helper built on process.hrtime for benchmarks and profiling.",
   "homepage": "https://github.com/kikobeats/time-span",
   "version": "1.0.13",
   "types": "src/index.d.ts",
@@ -19,16 +19,12 @@
     "url": "https://github.com/kikobeats/time-span/issues"
   },
   "keywords": [
-    "bench",
     "benchmark",
     "elapsed",
-    "highres",
     "hrtime",
     "measure",
     "milliseconds",
-    "perf",
     "performance",
-    "process",
     "profiling",
     "span",
     "time",
@@ -79,6 +75,7 @@
   },
   "nano-staged": {
     "*.js": [
+      "npx @kikobeats/prettier-standard",
       "standard --fix"
     ],
     "package.json": [
